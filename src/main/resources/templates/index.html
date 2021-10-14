@@ -5,6 +5,37 @@
     <title>Recipe Home</title>
 </head>
 <body>
-    <h1>My recipes!</h1>
+<h1>My recipes!</h1>
+<table>
+    <thead>
+    <tr>
+        <th style="width: 150px;">Id</th>
+        <th style="width: 150px;">description</th>
+        <th style="width: 150px;">prepTime</th>
+        <th style="width: 150px;">cookTime</th>
+        <th style="width: 150px;">source</th>
+        <th style="width: 150px;">url</th>
+        <th style="width: 150px;">difficulty</th>
+        <th style="width: 150px;">ingredients</th>
+        <th style="width: 150px;">notes</th>
+        <th style="width: 150px;">categories</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="list : ${lists}">
+        <td th:text="${list.id}"></td>
+        <td th:text="${list.description}"></td>
+        <td th:text="${list.prepTime}"></td>
+        <td th:text="${list.cookTime}"></td>
+        <td th:text="${list.source}"></td>
+        <td th:text="${list.url}"></td>
+        <td th:text="${list.difficulty}"></td>
+        <td th:text="${list.ingredients}"></td>
+        <td th:text="${list.notes}"></td>
+        <td th:text="${list.categories}"></td>
+    </tr>
+    </tbody>
+</table>
 </body>
 </html>
