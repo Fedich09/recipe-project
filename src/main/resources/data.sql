@@ -6,6 +6,7 @@ INSERT INTO category (description)
 VALUES ('Mexican');
 INSERT INTO category (description)
 VALUES ('Fast Food');
+
 INSERT INTO unit_of_measure (description)
 VALUES ('Teaspoon');
 INSERT INTO unit_of_measure (description)
@@ -16,3 +17,11 @@ INSERT INTO unit_of_measure (description)
 VALUES ('Pinch');
 INSERT INTO unit_of_measure (description)
 VALUES ('Ounce');
+INSERT INTO unit_of_measure (description)
+VALUES ('Ripe');
+INSERT INTO unit_of_measure (description)
+VALUES ('Serrano');
+INSERT INTO unit_of_measure (description)
+VALUES ('Clove');
+INSERT INTO unit_of_measure (description)
+VALUES ('Pounds');
