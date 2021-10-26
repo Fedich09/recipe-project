@@ -7,12 +7,14 @@ import com.recipeproject.recipeproject.domain.Recipe;
 import com.recipeproject.recipeproject.repositories.CategoryRepository;
 import com.recipeproject.recipeproject.repositories.RecipeRepository;
 import com.recipeproject.recipeproject.repositories.UnitOfMeasureRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
 
+@Slf4j
 @Component
 public class DataBootstrap implements ApplicationListener<ContextRefreshedEvent> {
 
@@ -30,6 +32,8 @@ public class DataBootstrap implements ApplicationListener<ContextRefreshedEvent>
 
     @Override
     public void onApplicationEvent(ContextRefreshedEvent event) {
+        log.debug("--- start data loading ---");
+
         Recipe theBestGuacamole = new Recipe();
         theBestGuacamole.setDescription("The word \"guacamole\" and the dip, are both originally from Mexico, " +
                 "where avocados have been cultivated for thousands of years. " +
@@ -69,5 +73,7 @@ public class DataBootstrap implements ApplicationListener<ContextRefreshedEvent>
         theBestGuacamole.getCategories().add(categoryRepository.findByDescription("Fast Food").orElseThrow());
 
         recipeRepository.save(theBestGuacamole);
+
+        log.debug("--- finish data loading ---");
     }
 }
