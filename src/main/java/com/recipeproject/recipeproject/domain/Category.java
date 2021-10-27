@@ -25,7 +25,9 @@ public class Category {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
+
     private String description;
+
     @ManyToMany(mappedBy = "categories")
     @ToString.Exclude
     private Set<Recipe> recipes;
