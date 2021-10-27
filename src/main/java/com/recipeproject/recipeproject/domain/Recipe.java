@@ -54,6 +54,7 @@ public class Recipe {
     private Set<Ingredient> ingredients = new HashSet<>();
 
     @OneToOne(cascade = CascadeType.ALL)
+    @ToString.Exclude
     private Notes notes;
 
     @ManyToMany
