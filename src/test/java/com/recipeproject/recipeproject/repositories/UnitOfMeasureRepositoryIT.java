@@ -27,4 +27,11 @@ class UnitOfMeasureRepositoryIT {
 
         assertEquals("Cup", optionalUnitOfMeasure.get().getDescription());
     }
+
+    @Test
+    void findByDescriptionPinch() {
+        Optional<UnitOfMeasure> optionalUnitOfMeasure = unitOfMeasureRepository.findByDescription("Pinch");
+
+        assertEquals("Pinch", optionalUnitOfMeasure.get().getDescription());
+    }
 }
