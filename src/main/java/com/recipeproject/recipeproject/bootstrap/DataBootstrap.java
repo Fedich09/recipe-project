@@ -44,6 +44,7 @@ public class DataBootstrap implements ApplicationListener<ContextRefreshedEvent>
         theBestGuacamole.setUrl("https://www.simplyrecipes.com/");
         theBestGuacamole.setDirection("forward");
         theBestGuacamole.setDifficulty(Difficulty.MODERATE);
+        theBestGuacamole.setServings(23);
 
         Ingredient avocado = new Ingredient();
         avocado.setAmount(BigDecimal.valueOf(2));
